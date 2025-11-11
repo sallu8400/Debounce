@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Footer Scroll Effect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: #f4f4f4;
+      min-height: 1200px;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      position: fixed; /* ✅ Footer stays fixed */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+      z-index: 5;
+    }
+
+    /* Add bottom padding to prevent content from hiding behind footer */
+    .content-wrapper {
+      padding-bottom: 80px; /* Equal or more than footer height */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Awesome Website</h1>
+    <nav>
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Home</a>
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">About</a>
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Services</a>
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Contact</a>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="content">
+      <h2>Welcome to Our Home Page!</h2>
+      <p>This page shows how the footer stays fixed while content scrolls.</p>
+      <p>Scroll down — the footer stays in place, and only the content moves.</p>
+      <h3>Section 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      <h3>Section 2</h3>
+      <p>More filler content to make the page scrollable...</p>
+      <h3>Section 3</h3>
+      <p>Keep scrolling. The footer stays fixed at the bottom.</p>
+      <h3>Section 4</h3>
+      <p>Enjoy this simple fixed footer layout!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
