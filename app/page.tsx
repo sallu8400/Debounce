@@ -10,24 +10,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 
 
-
+import type { Product } from '@/types';
 import ProductSkeleton from '@/components/Skeleton';
 import Sort from '@/components/Sort';
 
 const PRODUCTS_PER_PAGE = 12;
- interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  brand: string;
-  category: string;
-  thumbnail: string;
-  images: string[];
-}
+
 const App: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
